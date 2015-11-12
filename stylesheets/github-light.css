@@ -77,7 +77,8 @@
 .pl-mh        /* markup.heading */,
 .pl-mh .pl-en /* markup.heading entity.name */,
 .pl-ms        /* meta.separator */ {
-  color: #1d3e81;
+ /* color: #1d3e81; */
+ color: green;
   font-weight: bold;
 }
 
