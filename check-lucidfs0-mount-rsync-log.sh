@@ -19,7 +19,7 @@ if mount | grep -q "Lucid@lucidfs0"; then
     # Check if it's mounted with specific options
     if mount | grep "Lucid@lucidfs0" | grep -q "lucidfs, local, synchronous"; then
         # Execute rsync command with logging
-        rsync -avP --exclude={'*.mxf','*.MXF','*.MOV','*.mov','*.MP4','*.mp4'} "$SOURCE" "$DESTINATION" >> "$LOG" 2>&1
+        rsync -avP --stats --exclude={'*.mxf','*.MXF','*.MOV','*.mov','*.MP4','*.mp4'} "$SOURCE" "$DESTINATION" >> "$LOG" 2>&1
     else
         echo "Volume is mounted but does not have the expected options."
     fi
